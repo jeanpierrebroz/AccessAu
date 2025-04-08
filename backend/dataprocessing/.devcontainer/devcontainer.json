@@ -1,0 +1,30 @@
+{
+    "name": "Data Processing Backend",
+    "image": "mcr.microsoft.com/devcontainers/python:3.12",
+    "features": {
+        "ghcr.io/devcontainers/features/conda:1": {
+            "version": "latest"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/opt/conda/bin/python",
+                "python.linting.enabled": true,
+                "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
+                "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+                "python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf"
+            }
+        }
+    },
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind,consistency=cached",
+        "source=${localEnv:HOME}/.cache/pip,target=/home/vscode/.cache/pip,type=bind,consistency=cached"
+    ],
+    "remoteUser": "vscode",
+    "postCreateCommand": "if [ -f environment.yml ]; then conda env update --file environment.yml; else pip install --upgrade pip && pip install -r requirements.txt || echo 'No requirements.txt found'; fi"
+}
