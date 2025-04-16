@@ -262,7 +262,7 @@ function App() {
         zIndex: 1000
       }}>
         <LoadScript
-          googleMapsApiKey="AIzaSyCmSJVUpHRXe6o3SOkm7v5NFp_u08GMfv0"
+          googleMapsApiKey="YOUR_KEY_HERE"
           libraries={['places']}
         >
           <div style={{ 
