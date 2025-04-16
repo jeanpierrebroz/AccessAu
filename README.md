@@ -1,7 +1,4 @@
-# AccessAu
-AccessAu is an ongoing open-source project to make cities (starting with Golden, CO) more accessible.
-
-# 🛣️ AccessAU: Accessible Routing Platform (Gold Standard Edition)
+# 🛣️ AccessAU: Accessible Route Finding
 
 Welcome to **AccessAU**, an ongoing open-source project to make cities (starting with Golden, CO) more accessible. The project provides wheelchair-accessible walking directions, powered by real-time Street View analysis and custom routing on OpenStreetMap data. The name "AccessAU" reflects our goal: increasing access while tipping our hats to Gold(AU) — because it all started in Golden, Colorado!
 
